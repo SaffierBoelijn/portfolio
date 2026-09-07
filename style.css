@@ -163,6 +163,74 @@ header {
 
 /*----PROJECTS----------------------------------------------------------------------------------*/
 
+.project-inner {
+    display: flex;
+    flex-direction: column;
+    max-width: var(--max-width);
+    justify-content: center;
+    margin-inline: auto;
+}
+.project-text {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 60px;
+} .project-text h2 {
+    font-size: var(--title-size);
+} .project-text p {
+    font-size: var(--txt-size);
+    color: var(--accent-color);
+    max-width: 52ch;
+}
+.project-cards {
+    display: flex;
+    flex-direction: row;
+    padding: 40px;
+}
+
+.project-card {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    
+} .card-img {
+    display: flex;
+    height: 300px;
+} .card-img img {
+    height: 100%;
+    border-radius: 18px;
+    border: #2b4d40 .1px solid;
+} .card-disc {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    height: 100%;
+} .card-disc p {
+    display: flex;
+    flex-direction: row;
+    color: var(--accent-color);
+    font-size: .9rem;
+    gap: 10px;
+} .card-disc h3 {
+    font-size: 1.5rem;
+} .card-list {
+    display: flex;
+    text-decoration: none;
+    list-style: none;
+    flex-direction: row;
+    gap: 10px;
+} .card-list li {
+    border: var(--border-color) 1px solid;
+    width: min-content;
+    height: min-content;
+    padding: .28rem .65rem;
+    border-radius: 999px;
+    color: var(--accent-color);
+    font-size: .8rem;
+}
+.consept {
+    color: var(--secondary-color);
+}
 /*----EXPERTISE---------------------------------------------------------------------------------*/
 
 .expertise-inner {
@@ -207,7 +275,7 @@ header {
 
 .skills {
     list-style: none;
-    color: var(--accent-color);
+    color: #fff;
 }
 .skills li {
     border-bottom: var(--border-color) 1px solid;
@@ -232,7 +300,7 @@ header {
 }
 .learning {
     list-style: none;
-    color: var(--accent-color);
+    color: #fff;
 }
 .learning li {
     border-bottom: var(--border-color) 1px solid;
