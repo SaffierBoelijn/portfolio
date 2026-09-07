@@ -94,7 +94,7 @@ header {
 /*----SECTION-----------------------------------------------------------------------------------*/
 
 .section {
-    padding: 60px 0;
+    padding: 110px 0;
     height: auto;
     border-bottom: var(--border-color) 1px solid;
     margin-inline: auto;
@@ -240,7 +240,7 @@ header {
     font-size: 1.5rem;
 }
 
-/*----OVERMIJ-----------------------------------------------------------------------------------*/
+/*----OVERMIJ/CONTACT---------------------------------------------------------------------------*/
 
 .overmij-inner,
 .contact-inner {
@@ -273,9 +273,23 @@ header {
     color: var(--accent-color);
 }
 
-/*----CONTACT------------------------------------------------------------------------------------*/
+.contact-disc p {
+    font-size: 1.5rem;
+}
 
-
+.contact-button {
+    background-color: var(--secondary-color);
+    color:#0b0d0c;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 130px;
+    height: 60px;
+    border-radius: 28px;
+    text-decoration: none;
+    color: #0b0d0c;
+    font-weight: bold;
+}
 
 /*----FOOTER------------------------------------------------------------------------------------*/
 
