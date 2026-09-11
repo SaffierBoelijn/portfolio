@@ -10,6 +10,7 @@
     --section: min(100% - 56px, 1180px);
     --txt-size: 1.1rem;
     --title-size: clamp(2rem, 6vw, 4rem);
+    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
@@ -350,15 +351,13 @@ header {
     padding-left: 40px;
     border-left: var(--border-color) 1px solid;
     width: 100%;
+    
 } .learning-con h3 {
     padding-bottom: 15px;
     font-size: 2rem;
-} .learning-con p {
-    color: var(--accent-color);
-    min-width: 49ch;
     border-bottom: var(--border-color) 1px solid;
-    padding-bottom: 15px;
 }
+
 .learning {
     list-style: none;
     color: #fff;
@@ -373,8 +372,8 @@ header {
 
 .overmij-inner,
 .contact-inner {
-    display: grid;
-    grid-template-columns: minmax(0, .8fr) minmax(0, 1.2fr);
+    display: flex;
+    flex-direction: row;
     max-width: var(--max-width);
     margin-inline: auto;
     width: 100%;
@@ -400,10 +399,12 @@ header {
     line-height: 1.45;
 } .overmij-disc p {
     color: var(--accent-color);
+    
 }
 
 .contact-disc p {
     font-size: 1.5rem;
+    margin-top: auto;
 }
 
 .contact-button {
@@ -418,6 +419,108 @@ header {
     text-decoration: none;
     color: #0b0d0c;
     font-weight: bold;
+}
+
+/*----PROFILE-----------------------------------------------------------------------------------*/
+
+.contact-left {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    width: 100%;
+}
+
+.profile {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-main {
+    display: flex;
+    gap: 40px;
+
+}
+.profile-main img {
+    width: 80px;
+    height: 80px;
+    border-radius: 99px;
+    object-fit: cover;
+    overflow: hidden;
+}
+.profile-id {
+    display: flex;
+    flex-direction: column;
+    gap: 13px;
+}
+
+.profile-pill {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border: 1px solid #05DF72;
+    background-color: color-mix(in srgb, #05DF72 15%, transparent );
+    width: min-content;
+    border-radius: 30px;
+    padding: 5px 15px;
+    color: #05DF72;
+}
+.profile-flash {
+    width: 9px;
+    height: 9px;
+    background-color: #05DF72;
+    border-radius: 99px;
+    animation: shimmer 1s infinite alternate;
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+
+.profile-links {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.contact-socials {
+    display: flex;
+    gap: 5px;
+    height: auto;
+}
+
+.github {   
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    background: grey;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: black;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: scale .2s ease-in-out;
+} .github:hover {
+    scale: .9;
+}
+.linkedin {
+    width: min-content;
+    height: min-content;
+    white-space: nowrap;
+    background: blue;
+    padding: 10px 20px;
+    border-radius: 30px;
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    transition: scale .2s ease-in-out;
+} .linkedin:hover {
+    scale: .9;
 }
 
 /*----FOOTER------------------------------------------------------------------------------------*/
