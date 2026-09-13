@@ -155,8 +155,9 @@ header {
     text-decoration: none;
     color: #0b0d0c;
     font-weight: bold;
+    transition: scale .2s ease-in-out;
 } .home-button:hover { 
-    transform: scale(1.05);
+    scale: .9;
 }
 
 .home-image {
@@ -419,8 +420,71 @@ header {
     text-decoration: none;
     color: #0b0d0c;
     font-weight: bold;
+    transition: scale .2s ease-in-out;
+} .contact-button:hover {
+    scale: .9;
 }
 
+/*----MUSIC-------------------------------------------------------------------------------------*/
+
+.music-inner {
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+    margin-inline: auto;
+    height: 100%;
+    width: 100%;
+    max-width: var(--max-width);
+} .music-inner h1 {
+    font-size: var(--title-size);
+} .music-inner p {
+    font-size: var(--txt-size);
+    color: var(--accent-color);
+}
+
+.music-content {
+    display: flex;
+    justify-content: space-between;
+}
+
+.music-player {
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    border: 1px solid var(--border-color);
+    padding: 20px;
+    overflow: hidden;
+    border-radius: 20px;
+} .music-player p {
+    font-size: var(--txt-size);
+    color: white;
+}.music-player img {
+    object-fit: cover;
+    width: 280px;
+    height: 280px;
+    rotate: 0deg;
+    animation: vinyl 10s linear infinite;
+}
+@keyframes vinyl {
+    0%{
+        rotate: 0;
+    }
+    100% {
+        rotate: 360deg;
+    }
+}
+
+.player-buttons {
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    margin: 15px 0;
+    scale: 1.5;
+}
+
+.apple-music {
+    pointer-events: none;
+}
 /*----PROFILE-----------------------------------------------------------------------------------*/
 
 .contact-left {
@@ -498,7 +562,7 @@ header {
     width: min-content;
     height: min-content;
     white-space: nowrap;
-    background: grey;
+    background: white;
     padding: 10px 20px;
     border-radius: 30px;
     color: black;
@@ -507,12 +571,13 @@ header {
     transition: scale .2s ease-in-out;
 } .github:hover {
     scale: .9;
+    background: grey;
 }
 .linkedin {
     width: min-content;
     height: min-content;
     white-space: nowrap;
-    background: blue;
+    background: #2d65bc;
     padding: 10px 20px;
     border-radius: 30px;
     color: white;
@@ -521,6 +586,7 @@ header {
     transition: scale .2s ease-in-out;
 } .linkedin:hover {
     scale: .9;
+    background: #2d64bcbf;
 }
 
 /*----FOOTER------------------------------------------------------------------------------------*/
