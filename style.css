@@ -10,12 +10,12 @@
     --max-width: 1200px;
     --txt-size: 1.1rem;
     --title-size: clamp(2rem, 6vw, 4rem);
-    scroll-behavior: smooth;
 }
 * {
     box-sizing: border-box;
     margin: 0;
     padding: 0;
+    scroll-behavior: smooth;
 }
 body {
     font-family: 'Poppins', sans-serif;
@@ -72,8 +72,6 @@ header {
     list-style: none;
     display: flex;
     column-gap: 20px;
-    margin: 0;
-    padding: 0;
 } .nav-list a {
     color: var(--accent-color);
     text-decoration: none;
@@ -87,7 +85,7 @@ header {
     width: 40px;
     height: 40px;
     border: #fff 1px solid;
-    transition: scale 6s ease;
+    transition: scale .2s ease, background-color .2s ease, border .2s ease;
 } .mode-toggle {
     width: 100%;
     height: 100%;
@@ -106,7 +104,6 @@ header {
 
 .section {
     padding: 110px 0;
-    height: auto;
     border-bottom: var(--border-color) 2px solid;
     margin-inline: auto;
 }
@@ -131,12 +128,10 @@ header {
 
 .home-text {
     display: grid;
-    justify-content: start;
     gap: 1.4rem;
 } .home-text h1 {
     font-size: clamp(3rem, 11vw, 8rem);
     line-height: 0.95;
-    color: #fff;
 } .home-subtitle {
     font-size: 1.5rem;
     color: var(--secondary-color);
@@ -157,7 +152,6 @@ header {
     height: 50px;
     border-radius: 24px;
     text-decoration: none;
-    color: #0b0d0c;
     font-weight: bold;
     transition: scale .2s ease-in-out;
 } .home-button:hover { 
@@ -209,8 +203,7 @@ header {
     transform-origin: bottom center;
     transition: rotate .45s cubic-bezier(.2,.8,.3,1),
                 translate .45s cubic-bezier(.2,.8,.3,1),
-                scale .45s cubic-bezier(.2,.8,.3,1),
-                border-color .3s ease;
+                scale .45s cubic-bezier(.2,.8,.3,1);
 }
 
 .project-card:nth-child(1) {
@@ -243,14 +236,13 @@ header {
     rotate: 0deg;
     translate: 0 -24px;
     scale: 1.05;
-    border-color: var(--secondary-color);
     z-index: 10;
 }
 .project-card:hover .card-disc {
     opacity: 1;
 }
 
-.card-img:hover {
+.project-card:hover .card-img {
     border-color: var(--secondary-color);
 }
 
@@ -258,8 +250,8 @@ header {
     aspect-ratio: 3 / 4;
     overflow: hidden;
     border-radius: 18px;
-    border: #2b4d40 1px solid;
-    transition: transform .2s ease, border-color .2s ease;
+    border: var(--card-border) 1px solid;
+    transition: border-color .2s ease;
 }
 
 .card-img img {
@@ -276,7 +268,6 @@ header {
     transition: opacity .45s ease-in-out;
 } .card-disc p {
     display: flex;
-    flex-direction: row;
     color: var(--accent-color);
     font-size: .9rem;
     gap: 10px;
@@ -322,18 +313,12 @@ header {
 }
 .expertise-lists {
     display: flex;
-    justify-content: start;
-    margin-inline: auto;
     gap: 40px;
     width: 100%;
-} .expertise-lists h3 {
-    font-size: 2rem;
 }
 .skills-con {
     display: flex;
     flex-direction: column;
-    text-align: start;
-    height: 100%;
     width: 100%;
 } .skills-con h3 {
     border-bottom: var(--border-color) 1px solid;
@@ -342,7 +327,6 @@ header {
 
 .skills {
     list-style: none;
-    color: #fff;
 }
 .skills li {
     border-bottom: var(--border-color) 1px solid;
@@ -365,7 +349,6 @@ header {
 
 .learning {
     list-style: none;
-    color: #fff;
 }
 .learning li {
     border-bottom: var(--border-color) 1px solid;
@@ -378,7 +361,6 @@ header {
 .about-inner,
 .contact-inner {
     display: flex;
-    flex-direction: row;
     max-width: var(--max-width);
     margin-inline: auto;
     width: 100%;
@@ -422,7 +404,6 @@ header {
     height: 60px;
     border-radius: 28px;
     text-decoration: none;
-    color: #0b0d0c;
     font-weight: bold;
     transition: scale .2s ease-in-out;
 } .contact-button:hover {
@@ -436,7 +417,6 @@ header {
     flex-direction: column;
     gap: 50px;
     margin-inline: auto;
-    height: 100%;
     width: 100%;
     max-width: var(--max-width);
 } .music-text h2 {
@@ -466,7 +446,6 @@ header {
     object-fit: cover;
     width: 280px;
     height: 280px;
-    rotate: 0deg;
     animation: vinyl 10s linear infinite;
 }
 @keyframes vinyl {
@@ -495,9 +474,7 @@ header {
     color: #9aa39d;
 }
 
-.apple-music {
-    pointer-events: none;
-}
+
 /*----PROFILE-----------------------------------------------------------------------------------*/
 
 .contact-left {
@@ -523,7 +500,6 @@ header {
     height: 80px;
     border-radius: 99px;
     object-fit: cover;
-    overflow: hidden;
 }
 .profile-id {
     display: flex;
@@ -568,7 +544,6 @@ header {
 .contact-socials {
     display: flex;
     gap: 5px;
-    height: auto;
 }
 
 .github {   
@@ -608,7 +583,6 @@ footer {
     border-top: var(--border-color) 1px solid;
     padding: 20px 0;
     text-align: center;
-    color: #fff;
 }
 
 /*----TRANSITION--------------------------------------------------------------------------------*/
