@@ -1,68 +1,54 @@
+Nieuwe TESTVERSLAG.md
+
+Let op: op GitHub staat nu een nieuwere commit (63b69cd, "Delete .DS_Store"). Pas het bestand daarom aan via GitHub of doe eerst git pull op je Mac.
+
 # Testverslag profielpagina
 
-**Naam:** Saffier Boelijn  
-**Testdatum:** 14 september 2026  
-**Geteste versie:** commit `7bffe56`  
-**Website:** [saffierb.nl](https://saffierb.nl/)  
-**Browser:** Chromium  
-**Schermformaten:** desktop (1440 × 1000), tablet (768 × 1024) en mobiel (390 × 844)
+**Naam:** Saffier Boelijn
+**Datum:** 14 september 2026
+**Versie:** commit `7bffe56`
+**Website:** [saffierb.nl](https://saffierb.nl/)
 
-## Doel
+## Wat heb ik getest?
 
-Ik heb mijn profielpagina getest om te controleren of de inhoud zichtbaar is, de navigatie en contactlinks kloppen en de pagina op verschillende schermformaten werkt. Ook heb ik de bediening met het toetsenbord, de animaties en de knoppen gecontroleerd.
+Ik heb mijn website getest op een laptop, een tablet en een telefoon. Ik keek of alles goed zichtbaar is, of de links werken en of ik de pagina ook met alleen het toetsenbord (Tab en Enter) kan gebruiken.
 
-## Wat goed werkt
+## Wat werkt goed
 
-- De website opent met HTTP-status 200.
-- Op desktop past de pagina binnen het scherm zonder horizontale overflow.
-- Alle afbeeldingen laden op desktop, tablet en mobiel.
-- Het raster is zichtbaar als achtergrond over de hele website.
-- De pagina bevat de secties Home, About, Projects, Expertise, Music en Contact.
-- De vijf navigatielinks gaan naar de juiste sectie.
-- GitHub, LinkedIn en de e-maillink verwijzen naar de juiste adressen.
-- De navigatie, themaknop, projectknop, Apple Music-iframe en contactlinks zijn met de Tab-toets bereikbaar.
-- De scrollanimaties worden uitgevoerd wanneer de onderdelen in beeld komen.
-- De vinylanimatie en de animatie van de beschikbaarheidsindicator zijn in de CSS aanwezig en actief.
-- Er trad geen JavaScript-paginafout op tijdens de test.
+- Op de laptop past alles netjes op het scherm.
+- Alle afbeeldingen laden.
+- De gridachtergrond is op de hele website te zien.
+- De menulinks gaan naar de goede sectie.
+- GitHub, LinkedIn en mijn e-mail gaan naar de goede plek.
+- Met Tab kom ik bij het menu, de knoppen en de contactlinks.
+- De scrollanimaties, de draaiende vinylplaat en het knipperende bolletje werken.
 
-## Gevonden problemen
+## Wat werkt nog niet
 
-### 1. Tablet en mobiel zijn breder dan het scherm
+### 1. Op tablet en telefoon is de pagina te breed
+Op een tablet en een telefoon moet je naar opzij scrollen, omdat de pagina breder is dan het scherm.
+**Wat ik ga doen:** de layout aanpassen zodat alles binnen het scherm past.
 
-Op een tablet van 768 pixels breed is de pagina 997 pixels breed. Op een mobiel van 390 pixels breed is de pagina 808 pixels breed. Daardoor valt inhoud buiten het scherm en moet de gebruiker horizontaal scrollen.
+### 2. De themaknop doet nog niks
+Als ik op de knop klik, verandert het thema niet.
+**Wat ik ga doen:** dit pak ik later op.
 
-**Status:** nog oplossen.
-
-### 2. De themaknop verandert het thema niet
-
-De knop met het halve-cirkelsymbool is bereikbaar en aanklikbaar, maar de achtergrondkleur verandert niet. In `script.js` staat alleen code voor de scrollanimaties.
-
-**Status:** nog oplossen of de knop verwijderen totdat deze werkt.
-
-### 3. De knop “View projects” gaat niet naar Projects
-
-De knop gebruikt `href="#"`. Daardoor gaat hij naar de bovenkant van de pagina in plaats van naar de projectsectie.
-
-**Status:** nog oplossen door de link naar `#projects` te laten verwijzen.
+### 3. "View projects" gaat niet naar Projects
+De knop brengt je naar de bovenkant van de pagina in plaats van naar mijn projecten.
+**Wat ik ga doen:** dit pak ik later op.
 
 ### 4. De muziekbediening werkt niet
+Als ik op de knoppen voor vorige, afspelen en volgende druk, gebeurt er niks. De afspeellijst van Apple Music kan ik ook niet aanklikken.
+**Wat ik ga doen:** zorgen dat de muziek wel te bedienen is.
 
-De vorige-, afspeel- en volgende-iconen zijn gewone `<i>`-elementen. Ze zijn niet met de Tab-toets bereikbaar en hebben geen JavaScriptfunctionaliteit. De Apple Music-embed kan bovendien niet met de muis worden bediend, omdat `.apple-music` de instelling `pointer-events: none` heeft.
+### 5. Apple Music en de icoontjes laden niet op de live site
+Op saffierb.nl blokkeren de beveiligingsinstellingen van de server de Apple Music-speler en de icoontjes van Font Awesome. Lokaal werkt het wel.
+**Wat ik ga doen:** de beveiligingsinstellingen aanpassen en de inline style van de iframe naar mijn CSS verplaatsen.
 
-**Status:** nog oplossen of duidelijk als decoratie tonen.
-
-### 5. Live beveiliging blokkeert delen van Music
-
-Op de live website blokkeert de Content Security Policy de externe Font Awesome-stylesheet en de Apple Music-embed. Daardoor laden de muziekiconen en de afspeellijst niet zoals bedoeld. De inline stijl van de embed wordt eveneens geblokkeerd.
-
-**Status:** nog oplossen in de website of serverinstellingen.
-
-### 6. Toegankelijke namen en zichtbare focus ontbreken deels
-
-De logolink heeft geen tekst of `aria-label`. De themaknop heeft ook geen `aria-label`. In de CSS staat geen eigen `:focus-visible`-stijl, waardoor toetsenbordgebruikers niet overal een duidelijke focusmarkering krijgen.
-
-**Status:** nog verbeteren.
+### 6. Toetsenbordgebruik kan beter
+Mijn logo en de themaknop hebben geen naam voor schermlezers. Met Tab zie je ook niet altijd goed waar je bent.
+**Wat ik ga doen:** `aria-label`s en een duidelijke focusstijl toevoegen.
 
 ## Conclusie
 
-De inhoud, afbeeldingen, achtergrond, sectienavigatie, contactlinks en scrollanimaties werken op de geteste versie. De desktopindeling past goed. De belangrijkste verbeterpunten zijn de horizontale overflow op tablet en mobiel en de onderdelen die eruitzien als bediening maar nog niet werken. Na deze aanpassingen test ik dezelfde onderdelen opnieuw en voeg ik de nieuwe resultaten aan dit verslag toe.
+Op de laptop werkt de basis goed: de inhoud, de links en de animaties doen het. De belangrijkste verbeterpunten zijn de layout op tablet en telefoon en de muziek. Als ik die heb aangepast, test ik alles opnieuw en zet ik de nieuwe resultaten in dit verslag.
