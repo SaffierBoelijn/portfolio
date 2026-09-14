@@ -33,11 +33,7 @@ Als ik op de knop klik, verandert het thema niet.
 De knop brengt je naar de bovenkant van de pagina in plaats van naar mijn projecten.
 **Wat ik ga doen:** dit pak ik later op.
 
-### 4. Apple Music en de icoontjes laden niet op de live site
-Op saffierb.nl blokkeren de beveiligingsinstellingen van de server de Apple Music-speler en de icoontjes van Font Awesome. Lokaal werkt het wel.
-**Wat ik ga doen:** de beveiligingsinstellingen aanpassen en de inline style van de iframe naar mijn CSS verplaatsen.
-
-### 5. Toetsenbordgebruik kan beter
+### 4. Toetsenbordgebruik kan beter
 Mijn logo en de themaknop hebben geen naam voor schermlezers. Met Tab zie je ook niet altijd goed waar je bent.
 **Wat ik ga doen:** `aria-label`s en een duidelijke focusstijl toevoegen.
 
