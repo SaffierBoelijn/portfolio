@@ -4,10 +4,10 @@ Let op: op GitHub staat nu een nieuwere commit (63b69cd, "Delete .DS_Store"). Pa
 
 # Testverslag profielpagina
 
-**Naam:** Saffier Boelijn
-**Datum:** 14 september 2026
-**Versie:** commit `7bffe56`
-**Website:** [saffierb.nl](https://saffierb.nl/)
+**Naam:** Saffier Boelijn  
+**Datum:** 14 september 2026  
+**Versie:** commit `7bffe56`  
+**Website:** [saffierb.nl](https://saffierb.nl/)  
 
 ## Wat heb ik getest?
 
