@@ -4,10 +4,10 @@
     --accent-color: #9aa39d;
     --secondary-color: #67b99a;
     --border-color: #222825;
-    /* idk */
+    --card-border: #2b4d40;
+    /* sizes */
     --header-h: 72px;
     --max-width: 1200px;
-    --section: min(100% - 56px, 1180px);
     --txt-size: 1.1rem;
     --title-size: clamp(2rem, 6vw, 4rem);
     scroll-behavior: smooth;
@@ -369,9 +369,9 @@ header {
     font-size: 1.5rem;
 }
 
-/*----OVERMIJ/CONTACT---------------------------------------------------------------------------*/
+/*----ABOUT/CONTACT---------------------------------------------------------------------------*/
 
-.overmij-inner,
+.about-inner,
 .contact-inner {
     display: flex;
     flex-direction: row;
@@ -381,16 +381,16 @@ header {
     gap: 40px;
 }
 
-.overmij-title,
+.about-title,
 .contact-title {
     width: 100%;
 }
-.overmij-title h2,
+.about-title h2,
 .contact-title h2 {
     font-size: var(--title-size);
 }
 
-.overmij-disc,
+.about-disc,
 .contact-disc {
     display: flex;
     flex-direction: column;
@@ -398,7 +398,7 @@ header {
     max-width: 60ch;
     width: 100%;
     line-height: 1.45;
-} .overmij-disc p {
+} .about-disc p {
     color: var(--accent-color);
     
 }
@@ -435,9 +435,9 @@ header {
     height: 100%;
     width: 100%;
     max-width: var(--max-width);
-} .music-inner h1 {
+} .music-text h2 {
     font-size: var(--title-size);
-} .music-inner p {
+} .music-text p {
     font-size: var(--txt-size);
     color: var(--accent-color);
 }
@@ -480,6 +480,15 @@ header {
     justify-content: center;
     margin: 15px 0;
     scale: 1.5;
+} 
+
+.fa-backward, .fa-play, .fa-forward {
+    transition: scale .9s ease-in-out ;
+}
+
+.fa-backward:hover, .fa-play:hover, .fa-forward:hover {
+    scale: 1.2;
+    color: #9aa39d;
 }
 
 .apple-music {
