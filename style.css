@@ -1,16 +1,33 @@
 :root {
     /* colors */
     --primary-color: #0b0d0c;
+    --text-color: #fff;
     --accent-color: #9aa39d;
     --secondary-color: #67b99a;
     --border-color: #222825;
     --card-border: #2b4d40;
+    --grid-line: #67b99a0d;
+    --on-secondary: #0b0d0c;
+    --select-bg: #67b99a;
+    --select-text: #0b0d0c;
     /* sizes */
     --header-h: 72px;
     --max-width: 1200px;
     --txt-size: 1.1rem;
     --title-size: clamp(2rem, 6vw, 4rem);
 }
+
+html[theme-mode="light"] {
+    --primary-color: #e8eae7;
+    --text-color: #1a1f1c;
+    --accent-color: #5f665f;
+    --secondary-color: #2f8f6b;
+    --border-color: #cfd4cf;
+    --card-border: #b3c9bd;
+    --grid-line: #2f8f6b1a;
+    --on-secondary: #fff;
+}
+
 * {
     box-sizing: border-box;
     margin: 0;
@@ -22,11 +39,17 @@ body {
     background-color: var(--primary-color);
     display: flex;
     flex-direction: column;
-    color: #fff;
+    color: var(--text-color);
     background-image:
-        linear-gradient(#67b99a0d 1px, transparent 1px),
-        linear-gradient(90deg, #67b99a0d 1px, transparent 1px);
+        linear-gradient( var(--grid-line) 1px, transparent 1px),
+        linear-gradient(90deg, var(--grid-line) 1px, transparent 1px);
     background-size: 40px 40px;
+    transition: background-color .3s ease, color .3s ease;
+}
+
+::selection {
+    background-color: var(--select-bg);
+    color: var(--select-text);
 }
 
 /*----HEADER------------------------------------------------------------------------------------*/
@@ -77,21 +100,21 @@ header {
     text-decoration: none;
     font-weight: 500;
 } .nav-list a:hover {
-    color: #fff;
+    color: var(--text-color);
 }
 
 .mode {
     border-radius: 100%;
     width: 40px;
     height: 40px;
-    border: #fff 1px solid;
+    border: var(--text-color) 1px solid;
     transition: scale .2s ease, background-color .2s ease, border .2s ease;
 } .mode-toggle {
     width: 100%;
     height: 100%;
     background: none;
     border: none;
-    color: #fff;
+    color: var(--text-color);
     font-size: 1.25rem;
 } .mode:hover {
     background-color: color-mix(in srgb, var(--secondary-color) 25%, transparent);
@@ -144,7 +167,7 @@ header {
 
 .home-button {
     background-color: var(--secondary-color);
-    color:#0b0d0c;
+    color: var(--on-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -396,7 +419,7 @@ header {
 
 .contact-button {
     background-color: var(--secondary-color);
-    color:#0b0d0c;
+    color: var(--on-secondary);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -441,7 +464,7 @@ header {
     border-radius: 20px;
 } .music-player p {
     font-size: var(--txt-size);
-    color: white;
+    color: var(--text-color);
 }.music-player img {
     object-fit: cover;
     width: 280px;
@@ -471,7 +494,7 @@ header {
 
 .fa-backward:hover, .fa-play:hover, .fa-forward:hover {
     scale: 1.2;
-    color: #9aa39d;
+    color: var(--accent-color);
 }
 
 
@@ -550,10 +573,10 @@ header {
     width: min-content;
     height: min-content;
     white-space: nowrap;
-    background: white;
+    background: 	var(--text-color);
     padding: 10px 20px;
     border-radius: 30px;
-    color: black;
+    color: var(--primary-color);
     text-decoration: none;
     font-size: 1.1rem;
     transition: scale .2s ease-in-out;
