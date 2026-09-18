@@ -15,10 +15,22 @@ const root = document.documentElement;
 const toggle = document.getElementById('mode-toggle');
 
 const saved = localStorage.getItem('theme');
-if (saved) root.setAttribute('theme-mode', saved);
+if (saved) root.setAttribute('data-theme-mode', saved);
 
 toggle.addEventListener('click', () => {
-    const next = root.getAttribute('theme-mode') === 'light' ? 'dark' : 'light';
-    root.setAttribute('theme-mode', next);
+    const next = root.getAttribute('data-theme-mode') === 'light' ? 'dark' : 'light';
+    root.setAttribute('data-theme-mode', next);
     localStorage.setItem('theme', next);
+});
+
+// nav list mobile
+const navToggle = document.getElementById('nav-toggle');
+const navList = document.querySelector('.nav-list');
+
+navToggle.addEventListener('click', () => {
+    navList.classList.toggle('open');
+});
+
+navList.querySelectorAll('a').forEach(link => {
+    link.addEventListener('click', () => navList.classList.remove('open'));
 });
